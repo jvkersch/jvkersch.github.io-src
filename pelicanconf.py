@@ -2,9 +2,13 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+import os
+
+IS_LOCAL = 'LOCAL' in os.environ
+
 AUTHOR = 'me'
 SITENAME = 'yangbok'
-SITEURL = 'https://jvkersch.github.io'
+SITEURL = '' if IS_LOCAL else 'https://jvkersch.github.io'
 
 PATH = 'content'
 
@@ -33,3 +37,5 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+THEME = "themes/pelican-mockingbird"
